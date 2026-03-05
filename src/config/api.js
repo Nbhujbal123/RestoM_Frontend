@@ -1,7 +1,8 @@
 // Centralized API configuration for RestoM
 // This file provides the base URL for all API calls
 
-export const API_BASE_URL = "https://restom-backend-2.onrender.com/api";
+// Use environment variable for API base URL (Vite)
+export const API_BASE_URL = import.meta.env.VITE_API_URL || "https://restom-backend-2.onrender.com/api";
 
 // Helper function to make fetch requests with error handling
 export const apiRequest = async (endpoint, options = {}) => {
